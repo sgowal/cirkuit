@@ -43,7 +43,6 @@ public class ComputerPlayer extends Player {
         
         // if the best move is wrong
         if (bestPoint == null || !g.getCircuit().isInside(bestPoint) || (getPosition()!=null && g.getCircuit().crossedBorder(getPosition(), bestPoint))) {
-            System.out.println(!g.getCircuit().isInside(bestPoint)+"!"+g.getCircuit().crossedBorder(getPosition(), bestPoint));
             Vector allMoves = g.getValidMoves(this);
             Vector validMoves = cleanValidMoves(g, (Vector)allMoves.clone());
             Point tmpPoint;
